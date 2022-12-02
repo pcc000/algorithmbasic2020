@@ -105,13 +105,13 @@ public class Code03_UnRecursiveTraversalBT {
 		head.right.left = new Node(6);
 		head.right.right = new Node(7);
 
-		pre(head);
+//		pre(head);
 		System.out.println("========");
 		in(head);
 		System.out.println("========");
-		pos1(head);
+//		pos1(head);
 		System.out.println("========");
-		pos2(head);
+//		pos2(head);
 		System.out.println("========");
 	}
 
