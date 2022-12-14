@@ -93,7 +93,7 @@ public class Code04_Kruskal {
 			Edge edge = priorityQueue.poll(); // O(logM)
 			if (!unionFind.isSameSet(edge.from, edge.to)) { // O(1)
 				result.add(edge);
-				unionFind.union(edge.from, edge.to);
+					unionFind.union(edge.from, edge.to);
 			}
 		}
 		return result;

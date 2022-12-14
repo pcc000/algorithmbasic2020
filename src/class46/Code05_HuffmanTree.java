@@ -159,6 +159,8 @@ public class Code05_HuffmanTree {
 
 	// 为了测试
 	public static void main(String[] args) {
+
+		System.out.println();
 		// 根据词频表生成哈夫曼编码表
 		HashMap<Character, Integer> map = new HashMap<>();
 		map.put('A', 60);
@@ -174,12 +176,19 @@ public class Code05_HuffmanTree {
 		}
 		System.out.println("====================");
 		// str是原始字符串
-		String str = "CBBBAABBACAABDDEFBA";
+		String str = "CBBBAABBACCCCCCCAABDDEFBA";
 		System.out.println(str);
 		// countMap是根据str建立的词频表
 		HashMap<Character, Integer> countMap = countMap(str);
+		for (Entry<Character, Integer> entry : countMap.entrySet()) {
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
 		// hf是根据countMap生成的哈夫曼编码表
 		HashMap<Character, String> hf = huffmanForm(countMap);
+		System.out.println("====================");
+		for (Entry<Character, String> entry : hf.entrySet()) {
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
 		// huffmanEncode是原始字符串转译后的哈夫曼编码
 		String huffmanEncode = huffmanEncode(str, hf);
 		System.out.println(huffmanEncode);
